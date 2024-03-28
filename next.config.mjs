@@ -1,4 +1,23 @@
+import path from 'node:path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    sassOptions: {
+        includePaths: [path.join(__filename, 'styles')],
+    },
+    images: {
+        remotePatterns: [
+            {//https://via.placeholder.com/150/92c952
+                protocol: 'https',
+                hostname: 'via.placeholder.com',
+                port: '',
+                pathname: '/150/**',
+            },
+        ],
+    },
+};
 
 export default nextConfig;
