@@ -1,8 +1,9 @@
+import AuthForm from '@/components/Form/AuthForm';
+
 function Page() {
 
     return (< div>
-            <h1> Hello
-                World </h1>
+           <AuthForm/>
         </div>
     );
 }
