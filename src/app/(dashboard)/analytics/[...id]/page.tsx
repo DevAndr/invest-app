@@ -1,18 +1,22 @@
 'use client'
 
-import React, {FC} from 'react';
+import React from 'react';
 import {useTitlePage} from "@/providers/TitleAppBar";
 
+interface PageAnalyticsProps {
+    params: {
+        id: string
+    }
+}
 
-const PageAnalytics: FC = () => {
+export default function PageAnalytics({params}: PageAnalyticsProps) {
     useTitlePage("Аналитика")
 
     return (
         <div className='m-6'>
             <div>Analytics</div>
+            <p>{params.id}</p>
             <p className='mt-4 text-small'>This page are for analytics </p>
         </div>
     );
 }
-
-export default PageAnalytics;
