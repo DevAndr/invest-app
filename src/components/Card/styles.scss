@@ -1,0 +1,26 @@
+.card {
+  .head {
+
+  }
+
+  .body {
+
+  }
+
+  .footer {
+
+  }
+}
+
+
+.card.post {
+  min-width: 320px;
+  width: 100%;
+
+  .footer {
+    .actions {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

@@ -1,13 +1,14 @@
-'use client'
+'use client';
 
 import React, {FC} from 'react';
 import {NextUIProvider} from "@nextui-org/react";
 import TitleAppBarProvider from "@/providers/TitleAppBar";
 import {ApolloProvider} from "@apollo/client";
 import apolloClient from "@/graphql/ApolloClient";
+import {AuthProvider} from '@/providers/AuthProvider';
 
 interface ProvidersProps {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 const Providers: FC<ProvidersProps> = ({children}) => {
@@ -15,11 +16,13 @@ const Providers: FC<ProvidersProps> = ({children}) => {
         <NextUIProvider>
             <TitleAppBarProvider>
                 <ApolloProvider client={apolloClient}>
-                {children}
+                    <AuthProvider>
+                        {children}
+                    </AuthProvider>
                 </ApolloProvider>
             </TitleAppBarProvider>
         </NextUIProvider>
     );
-}
+};
 
 export default Providers;

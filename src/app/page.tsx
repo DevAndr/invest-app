@@ -1,21 +1,21 @@
-import {getArtist} from "@/actions";
-import {useQuery} from "@apollo/client";
-import {GET_POSTS} from "@/graphql/graphql";
+'use client'
+
 import Posts from "@/components/Posts/Posts";
+import {useAuth} from '@/providers/AuthProvider';
+import {hasAccessToken} from '@/actions';
 
-export default async function Home() {
+export default function Home() {
+    const {isAuth} = useAuth()
 
-    const artistData = await getArtist(5)
-    console.log(artistData)
-
+    console.log( isAuth);
     return (
-        <>
-
-            <div>{1}</div>
-            <div>{artistData?.id}</div>
-            {/*<PostsMore/>*/}
-            <Posts/>
-            {/*<button>Click</button>*/}
-        </>
+        <div className='page'>
+           <div className="content">
+               <Posts/>
+               <div style={{color: 'red'}}>
+                   {isAuth ? 'Вы вошли' : 'Вы вышли'}
+               </div>
+           </div>
+        </div>
     );
 }

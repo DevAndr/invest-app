@@ -1,0 +1,17 @@
+.auth-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  //background-color: #ffffff;
+  border-radius: .5rem;
+  height: 100%;
+
+}
