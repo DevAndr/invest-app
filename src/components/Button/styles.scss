@@ -1,0 +1,13 @@
+.btn {
+
+}
+
+.btn-counter{
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+
+  .label {
+    font-weight: 500;
+  }
+}
