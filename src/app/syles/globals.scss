@@ -1,38 +1,40 @@
+@import "normalize.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import "layouts";
-
+@import "captions";
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+  --bg: #13141a;
+  --color-text: #fff;
+
+  --danger: #df3e5a;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+  :root {
+    --bg: #13141a;
+  }
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-    ) rgb(var(--background-start-rgb));
+  font-size: 14px;
+  color: var(--color-text);
+  background-color: var(--bg);
 }
 
 @layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
-h1 {
-    font-size: 2rem;
+.rubik {
+  font-family: var(--font-rubik);
+}
+
+.page {
+  height: 100svh;
 }

@@ -1,17 +1,21 @@
-import {getArtist} from "@/actions";
-import Posts from "@/components/Posts";
+'use client'
 
-export default async function Home() {
-    const artistData = await getArtist(5)
-    console.log(artistData)
+import Posts from "@/components/Posts/Posts";
+import {useAuth} from '@/providers/AuthProvider';
+import {hasAccessToken} from '@/actions';
 
+export default function Home() {
+    const {isAuth} = useAuth()
+
+    console.log( isAuth);
     return (
-        <>
-
-            <div>{1}</div>
-            <div>{artistData?.id}</div>
-            <Posts/>
-            {/*<button>Click</button>*/}
-        </>
+        <div className='page'>
+           <div className="content">
+               <Posts/>
+               <div style={{color: 'red'}}>
+                   {isAuth ? 'Вы вошли' : 'Вы вышли'}
+               </div>
+           </div>
+        </div>
     );
 }
