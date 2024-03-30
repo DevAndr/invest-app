@@ -3,7 +3,7 @@ import Image from 'next/image'
 import {getPosts} from "@/actions";
 
 
-const Posts: FC = async () => {
+const PostsMore: FC = async () => {
     const posts = await getPosts();
     return (
         <div >
@@ -25,4 +25,4 @@ const Posts: FC = async () => {
     );
 }
 
-export default Posts;
+export default PostsMore;
