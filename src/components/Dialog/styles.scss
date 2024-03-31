@@ -1,0 +1,15 @@
+.dialog {
+  .head {}
+  .body {}
+  .footer{}
+}
+
+.dialog.create-post {
+  .head {
+    .title {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 1rem;
+    }
+  }
+}
