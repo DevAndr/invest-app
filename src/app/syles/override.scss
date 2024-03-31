@@ -1,0 +1,33 @@
+.filepond--file-action-button.filepond--action-edit-item {
+  cursor: pointer;
+}
+//
+//.filepond--item {
+//  //width: calc(50% - 0.5em);
+//}
+
+.filepond--label-action {
+  color: var(--primary-color);
+  text-decoration: none !important;
+  transition: all ease-in 120ms;
+}
+.filepond--label-action:hover {
+  color: var(--secondary-color);
+}
+
+.filepond--panel-root {
+  background-color: #18181b !important;
+  border-radius: var(--br) !important;
+}
+
+.filepond--credits {
+  display: none !important;
+}
+
+.filepond--drop-label {
+  color: var(--text-color) !important;
+}
+
+.filepond--drip-blob {
+  background-color: #d3d3d3 !important;
+}
