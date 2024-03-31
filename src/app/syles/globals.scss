@@ -3,8 +3,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "variables";
 @import "layouts";
 @import "captions";
+@import "override";
 
 :root {
   --bg: #13151a;
