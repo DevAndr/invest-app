@@ -11,10 +11,10 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {//https://via.placeholder.com/150/92c952
-                protocol: 'https',
-                hostname: 'via.placeholder.com',
+                protocol: 'http',
+                hostname: 'localhost',
                 port: '',
-                pathname: '/150/**',
+                pathname: '/uploads/**',
             },
         ],
     },

@@ -36,6 +36,11 @@ export type Investment = {
      // Post: Post
      // postId: string
  }
+
+ export type Tag = {
+     id: string
+     value: string
+ }
 export enum InvestmentType {
     INDEX,
     CRYPTO,

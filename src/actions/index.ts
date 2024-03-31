@@ -2,10 +2,10 @@
 
 import instanceAxios from '@/axios/InstanceAxios';
 import {cookies} from 'next/headers';
-import {Post} from '@/types';
+import {Post, Tag} from '@/types';
 import apolloClient from '@/graphql/ApolloClient';
 import {GET_POSTS} from '@/graphql/gql';
-import {FormCreatePostState} from '@/components/dialog/CreatePostDialog';
+import {FormCreatePostState} from '@/components/Dialog/CreatePostDialog';
 
 
 export async function getMyPosts(): Promise<Post[]> {
@@ -51,23 +51,14 @@ export async function hasAccessToken() {
     return !!cookies().get('accessToken');
 }
 
-export async function createCreatePostAction(prevState: any, formData: FormData) {
+export type CreateCreatePostActionProps = {
+    title: string
+    description: string
+    files: string[],
+    tags: Tag[]
+}
 
-    const rawFormData = {
-        title: formData.get('title'),
-        description: formData.get('description'),
-    }
-
-    console.log(rawFormData, prevState);
-
-    return await new Promise(resolve => setTimeout(() => resolve({
-        ...rawFormData,
-        message: {
-            title: 'Введите название поста',
-            description: ''
-        },
-        isDone: false
-    }), 1000))
-
+export async function createCreatePostAction(data: CreateCreatePostActionProps) {
+    console.log(data);
 
 }
