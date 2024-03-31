@@ -12,7 +12,7 @@ import {useAuth} from '@/providers/AuthProvider';
 import {Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure} from '@nextui-org/react';
 import { IoCreateOutline } from 'react-icons/io5';
 import './styles.scss'
-import CreatePostDialog from '@/components/dialog/CreatePostDialog';
+import CreatePostDialog from '@/components/Dialog/CreatePostDialog';
 
 interface PostsProps {
 
