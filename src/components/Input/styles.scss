@@ -7,3 +7,12 @@
 
   }
 }
+
+.input-tags {
+  display: flex;
+  gap: 1rem;
+
+  .input {
+    flex: 0 25%;
+  }
+}
