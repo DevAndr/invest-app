@@ -1,0 +1,30 @@
+.field {
+  .label {
+
+  }
+}
+
+.field.icon {
+  gap: .25rem;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    color: #a1a1aa;
+  }
+}
+
+.field.platform {
+
+}
+
+.field.strategies {
+  gap: .5rem;
+  display: flex;
+
+  .type-strategy {
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+  }
+}

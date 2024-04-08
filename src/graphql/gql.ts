@@ -54,3 +54,36 @@ export const CREATE_TAG = gql`
         value
     }
 }`
+
+export const GET_ALL_CRYPTO_INVESTMENTS = gql`
+    query {
+        getAllCryptoInvestments {
+            amountInvest
+            coin {
+                id
+                symbol
+            }
+            createAt
+            currentAmount
+            goal
+            id
+            orderDate
+            platform
+            profit
+            status
+            strategy
+            updateAt
+        }
+    } 
+`
+
+export const CREATE_TOKEN_PLATFORM = gql`
+    mutation CreateTokenPlatform($data: CreateTokenPlatform!) {
+        createTokenPlatform(data: $data) {
+            expireAt
+            id
+            platform
+            token
+        }
+    }
+`

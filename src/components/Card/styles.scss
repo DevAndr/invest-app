@@ -24,3 +24,99 @@
     }
   }
 }
+
+.card.crypto {
+  min-width: 320px;
+
+  .plus {
+    color: #17C964 !important;
+  }
+
+  .minus {
+    color: var(--danger) !important;
+  }
+
+  .head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      .symbol {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .created {
+        font-size: 0.65rem;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+
+      .updated {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: baseline;
+
+    .data {
+      .label {
+        font-size: .6rem;
+        text-align: center;
+      }
+
+      .value {
+        text-align: center;
+      }
+    }
+
+    .invest {
+      font-size: 1.5rem;
+    }
+
+    .current {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #f5a524;
+    }
+
+    .profit {
+      font-size: 1rem;
+    }
+
+    .goal {
+      font-size: 1.5rem;
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    .profit {
+      gap: 1rem;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      .value {
+        color: #f5a524;
+      }
+    }
+  }
+}
