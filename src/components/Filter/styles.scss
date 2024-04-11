@@ -1,0 +1,19 @@
+.filter {
+  gap: 1rem;
+  display: flex;
+}
+
+.filter.crypto-invest {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: sticky;
+  top: 1rem;
+  z-index: 9;
+  padding: 0 .5rem .5rem .5rem;
+  background-color: #131519;
+
+  .chip {
+    cursor: pointer;
+  }
+}

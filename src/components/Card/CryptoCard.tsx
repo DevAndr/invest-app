@@ -11,6 +11,7 @@ import {GrCurrency} from 'react-icons/gr';
 import PlatformField from '@/components/Field/PlatformField';
 import StatusInvest from '@/components/Field/StatusInvest';
 import FieldTypeStrategy from '@/components/Field/FieldTypeStrategy';
+import {NumberFormat} from '@/utils/NumberFormat';
 
 interface CryptoCardProps {
     data: CryptoInvestment;
@@ -35,15 +36,15 @@ const CryptoCard: FC<CryptoCardProps> = ({data}) => {
             </CardHeader>
             <CardBody className="body">
                 <div className="data invest">
-                    <div className="value">{data.amountInvest}</div>
+                    <div className="value">{(data.amountInvest)}</div>
                     <div className="label">вложено</div>
                 </div>
                 <div className="data current">
-                    <div className="value">{data.currentAmount}</div>
+                    <div className="value">{NumberFormat.format(data.currentAmount)}</div>
                     <div className="label">баланс</div>
                 </div>
                 <div className="data goal">
-                    <div className="value">{data.goal}</div>
+                    <div className="value">{NumberFormat.format(data.goal)}</div>
                     <div className="label">цель</div>
                 </div>
             </CardBody>

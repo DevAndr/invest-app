@@ -12,4 +12,9 @@ export class DateUtils {
     public static dateTimeToString = (date: Date) => {
         return DateTime.fromJSDate(new Date(date)).toFormat('dd.MM.yy HH:mm');
     };
+
+    public static currentDate = (): string => {
+        return DateTime.fromJSDate(new Date(), ).toFormat('dd.MM.yyyy')
+    }
 }
+

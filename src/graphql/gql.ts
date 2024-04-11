@@ -87,3 +87,25 @@ export const CREATE_TOKEN_PLATFORM = gql`
         }
     }
 `
+
+export const CREATE_CRYPTO_INVESTMENT = gql`
+    mutation CreateCryptoInvestment($data: CreateCryptoInvestInput!) {
+        createCryptoInvestment(data: $data) {
+            amountInvest
+            coin {
+                symbol
+                id
+            }
+            createAt
+            currentAmount
+            goal
+            id
+            orderDate
+            platform
+            profit
+            status
+            strategy
+            updateAt
+        }
+    }
+`

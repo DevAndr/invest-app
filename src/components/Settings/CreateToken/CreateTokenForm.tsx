@@ -7,17 +7,13 @@ import {Platform, TokenPlatform} from '@/types';
 import {KeyValueItem} from '@/components/types';
 import SubmitBtn from '@/components/Button/SubmitBtn';
 import {Input} from '@nextui-org/input';
-import {useFormState} from 'react-dom';
 import * as Yup from 'yup';
 import {useMutation} from '@apollo/client';
 import {CREATE_TOKEN_PLATFORM} from '@/graphql/gql';
 import {CreateTokenPlatformArgs, ResponseCreateTokenPlatform, VariablesCreateTokenPlatform} from '@/graphql/types';
 import {DateUtils} from '@/utils/DateUtils';
 import {useFormik} from 'formik';
-import {createCreatePostAction, CreateCreatePostActionProps} from '@/actions';
-import {f} from '@nextui-org/slider/dist/use-slider-64459b54';
-
-let tokenSchema = Yup.object({
+const tokenSchema = Yup.object({
     token: Yup.string().required('Заполните поле'),
     expireAt: Yup.date().required('Заполните поле').min(new Date(), 'Дата должна быть больше текущней').nonNullable('Заполните поле'),
     platform: Yup.string().required('Выбирите платформу')
