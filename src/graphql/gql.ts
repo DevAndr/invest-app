@@ -48,9 +48,9 @@ mutation FindPartialTags($value: String!) {
 }`
 
 export const CREATE_TAG = gql`
-    mutation CreateTag {
-    createTag(value: $value) {
-        id
-        value
-    }
-}`
+    mutation CreateTag($value: String!) {
+        createTag(value: $value) {
+            id
+            value
+        }
+    }`

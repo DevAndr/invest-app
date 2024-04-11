@@ -70,10 +70,10 @@ const InputTags: FC<InputTagsProps> = ({onChange}) => {
     const inputTagHandle = async (e: React.ChangeEvent<HTMLInputElement>) =>
         setCurTag(e.target.value);
 
-    const addTagHandle = () => {
+    const addTagHandle = async () => {
         if (curTag.trim()) {
             setTags([...tags, {id: Date.now().toString(), value: curTag}]);
-            fetchCreateTag({
+            await fetchCreateTag({
                 variables: {
                     value: curTag
                 }
